@@ -15081,4 +15081,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aiPath: {fileID: 1962559531}
-  newSpeed: 10
