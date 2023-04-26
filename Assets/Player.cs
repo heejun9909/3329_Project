@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
         ps.health -= d;
         if (ps.health <= 0){
             m_animator.SetBool("isDead", true);
-            // GameMaster.KillPlayer(this);
+            GameMaster.KillPlayer(this);
         }
     }
 }
