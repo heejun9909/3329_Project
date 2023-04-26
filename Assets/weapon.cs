@@ -58,10 +58,7 @@ public class weapon : MonoBehaviour
                 Debug.Log("We hit " + hit.collider.name + " and did " + damage + " damage.");
             }
 
-            // if (hit.collider.name  == "player"){
-
-            // }
-            Debug.Log("We hit " + hit.collider.name + " and did " + damage + " damage.");
+            //Debug.Log("We hit " + hit.collider.name + " and did " + damage + " damage.");
         }
     } 
     void effect(){

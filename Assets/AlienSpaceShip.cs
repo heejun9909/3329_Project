@@ -52,7 +52,7 @@ public class AlienSpaceShip : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         // Check if the colliding object is the player
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.collider.CompareTag("Player"))
         {
             // Reduce health of the AlienSpaceShip
             AS.curHealth -= 1;
@@ -69,9 +69,9 @@ public class AlienSpaceShip : MonoBehaviour
             if (player != null)
             {
                 // Call the DamagePlayer method with the desired damage value
-                player.DamagePlayer(1000);
+                player.DamagePlayer(10);
                 //maybe destroy itself too
-                //DamageAlienship(9999);
+                DamageAlienship(9999);
             }
         }
     }
@@ -89,26 +89,4 @@ public class AlienSpaceShip : MonoBehaviour
         }
     }
 
-    public class AlienSpaceShip_logic : MonoBehaviour
-    {
-        public AIPath aiPath;
-
-        // Update is called once per frame
-        void Update()
-        {
-            //the path is going right
-            if (aiPath.desiredVelocity.x >= 0.01f)
-            {
-                transform.localScale = new Vector3(1f, 1, 1);
-
-            }
-            //the path is going left
-            else if (aiPath.desiredVelocity.x <= -0.01f)
-            {
-                transform.localScale = new Vector3(-1f, 1, 1);
-            }
-
-        }
-
-    }
 }
