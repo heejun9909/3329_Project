@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 6974244458338961341}
   - component: {fileID: 4534165758608151682}
   - component: {fileID: -1264753896664315920}
-  - component: {fileID: -5473605821009477974}
+  - component: {fileID: 8017593304034606346}
   m_Layer: 9
   m_Name: AlienSpaceship
   m_TagString: Enemy
@@ -322,7 +322,7 @@ MonoBehaviour:
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
   constrainInsideGraph: 1
---- !u!114 &-5473605821009477974
+--- !u!114 &8017593304034606346
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -335,7 +335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  target: {fileID: 2010575828996259261, guid: 5531a419018afd44cb8407aeeab4bace, type: 3}
+  target: {fileID: 0}
 --- !u!1 &6974244459085153962
 GameObject:
   m_ObjectHideFlags: 0
