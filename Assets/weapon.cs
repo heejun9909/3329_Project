@@ -17,7 +17,7 @@ public class weapon : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        firepoint = transform.FindChild("firepoint");
+        firepoint = transform.Find("firepoint");
         if (firepoint == null){
             Debug.LogError("No firepoint");
 
