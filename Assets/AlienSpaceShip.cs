@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using Pathfinding;
+<<<<<<< HEAD:Assets/AlienSpaceShip.cs
 using System.Diagnostics;
 using System;
 
@@ -86,4 +87,26 @@ public class AlienSpaceShip : MonoBehaviour
             statusIndicator.SetHealth(AS.curHealth, AS.MaxHealth);
         }
     }
+=======
+public class AlienSpaceShip_logic : MonoBehaviour
+{
+    public AIPath aiPath;
+    
+    // Update is called once per frame
+    void Update()
+    {
+        //the path is going right
+        if (aiPath.desiredVelocity.x >= 0.01f)
+        {
+            transform.localScale = new Vector3(1f, 1, 1);
+
+        }
+        //the path is going left
+        else if (aiPath.desiredVelocity.x<=-0.01f)
+        {
+            transform.localScale = new Vector3(-1f, 1, 1);
+        }
+
+    }
+>>>>>>> 4a39ffe20ab2c3290bccfb752dce19ef64802a32:Assets/AlienSpaceShip_logic.cs
 }

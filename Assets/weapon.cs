@@ -16,7 +16,7 @@ public class weapon : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        firepoint = transform.Find("firepoint");
+        firepoint = transform.FindChild("firepoint");
         if (firepoint == null){
             Debug.LogError("No firepoint");
 
@@ -49,6 +49,7 @@ public class weapon : MonoBehaviour
         Debug.DrawLine (firepointpos, (mousepos - firepointpos)*100, Color.cyan);
         if (hit.collider != null){
             Debug.DrawLine (firepointpos, hit.point, Color.red);
+<<<<<<< HEAD
  
             //check which enemy hit
             AlienSpaceShip alienSpaceShip = hit.collider.GetComponent<AlienSpaceShip>();
@@ -57,6 +58,13 @@ public class weapon : MonoBehaviour
                 alienSpaceShip.DamageAlienship(damage);
                 Debug.Log("We hit " + hit.collider.name + " and did " + damage + " damage.");
             }
+=======
+
+            // if (hit.collider.name  == "player"){
+
+            // }
+            Debug.Log("We hit " + hit.collider.name + " and did " + damage + " damage.");
+>>>>>>> 4a39ffe20ab2c3290bccfb752dce19ef64802a32
         }
     } 
     void effect(){
