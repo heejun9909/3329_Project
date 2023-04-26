@@ -4624,7 +4624,7 @@ GameObject:
   - component: {fileID: 678650020}
   - component: {fileID: 678650019}
   - component: {fileID: 678650022}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: StatussIndicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4739,7 +4739,7 @@ GameObject:
   - component: {fileID: 925196814}
   - component: {fileID: 925196816}
   - component: {fileID: 925196815}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4861,7 +4861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2356842163193885502, guid: e1cf5c700607e4a09b0981a38324b39c, type: 3}
       propertyPath: m_Layer
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1cf5c700607e4a09b0981a38324b39c, type: 3}
@@ -4874,7 +4874,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1145069401}
-  m_Layer: 2
+  m_Layer: 6
   m_Name: firepoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4907,7 +4907,7 @@ GameObject:
   - component: {fileID: 1173558747}
   - component: {fileID: 1173558748}
   - component: {fileID: 1173558749}
-  m_Layer: 2
+  m_Layer: 6
   m_Name: bullethole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4922,6 +4922,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1173558746}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.1, y: 0.015, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1145069401}
   m_Father: {fileID: 1347072032}
@@ -4954,6 +4957,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wattohit:
     serializedVersion: 2
+    m_Bits: 951
   fr: 0
   damage: 10
   bullettrailprefab: {fileID: 3838683904050923770, guid: b63483a9aead347ebbaf937cdcede00f, type: 3}
@@ -4973,7 +4977,7 @@ GameObject:
   - component: {fileID: 1347072028}
   - component: {fileID: 1347072033}
   - component: {fileID: 1347072034}
-  m_Layer: 2
+  m_Layer: 6
   m_Name: player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5147,7 +5151,7 @@ GameObject:
   - component: {fileID: 1476978169}
   - component: {fileID: 1476978171}
   - component: {fileID: 1476978170}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: HealthText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15135,7 +15139,7 @@ GameObject:
   - component: {fileID: 1962559532}
   - component: {fileID: 1962559531}
   - component: {fileID: 1962559530}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15247,9 +15251,8 @@ GameObject:
   - component: {fileID: 2096456115}
   - component: {fileID: 2096456116}
   - component: {fileID: 2096456117}
-  - component: {fileID: 2096456119}
-  - component: {fileID: 2096456120}
-  m_Layer: 0
+  - component: {fileID: 2096456118}
+  m_Layer: 9
   m_Name: AlienSpaceship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15337,4 +15340,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aiPath: {fileID: 1962559531}
-
+  newSpeed: 3
+  AS:
+    MaxHealth: 100
+  statusIndicator: {fileID: 678650022}
+--- !u!58 &2096456118
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096456114}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.15

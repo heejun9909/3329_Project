@@ -70,6 +70,8 @@ public class AlienSpaceShip : MonoBehaviour
             {
                 // Call the DamagePlayer method with the desired damage value
                 player.DamagePlayer(1000);
+                //maybe destroy itself too
+                //DamageAlienship(9999);
             }
         }
     }
