@@ -193,7 +193,7 @@ MonoBehaviour:
     count: 3
     rate: 1.5
   - name: ver3.0
-    enemy: {fileID: 7549248560354765428, guid: fc0061f01e0b60a4f9c9382391e1fb74, type: 3}
+    enemy: {fileID: 4017160501487375715, guid: ee92362d6973008419cd0f5d15ff8ec2, type: 3}
     count: 1
     rate: 2
   spawnPoints:

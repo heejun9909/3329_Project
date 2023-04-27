@@ -22,10 +22,9 @@ public class bosscontroller : MonoBehaviour
     }
 
     public Boss BS = new Boss();
-
+    public HealthbarScript healthBar;
     [Header("Optional: ")]
     [SerializeField]
-    private StatusIndicator statusIndicator;
 
     public AIPath aiPath;
     public Sprite angryStageSprite;
@@ -44,16 +43,14 @@ public class bosscontroller : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = initialStageSprite;
 
-        //for showing the statusIndicator
-        if (statusIndicator != null)
-        {
-            statusIndicator.SetHealth(BS.curHealth, BS.MaxHealth);
-        }
+        //setting the health bar
+        healthBar.SetMaxHealth(BS.MaxHealth);
+
     }
 
     void Update()
     {
-        if (BS.curHealth <= 50 && angryStageSprite != null)
+        if (BS.curHealth <= BS.MaxHealth/2 && angryStageSprite != null)
         {
             stage2 = true;
             //change stage,photo
@@ -65,8 +62,6 @@ public class bosscontroller : MonoBehaviour
         }
         else
         {
-            //for testing
-            BS.curHealth -= 1;
 
             //stage 1, random move
             Vector3 randomDirection = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0f);
@@ -104,10 +99,8 @@ public class bosscontroller : MonoBehaviour
         {
             GameMaster.KillGPABoss(this);
         }
-        if (statusIndicator != null)
-        {
-            statusIndicator.SetHealth(BS.curHealth, BS.MaxHealth);
-        }
+
+        healthBar.SetHealth(BS.curHealth);
     }
 
 
