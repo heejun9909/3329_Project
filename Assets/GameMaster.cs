@@ -14,6 +14,7 @@ public class GameMaster : MonoBehaviour
     }
 
 
+    //for enemy settings
     public static void DestoryAlienship(AlienSpaceShip a)
     {
         Destroy(a.gameObject);
@@ -22,5 +23,15 @@ public class GameMaster : MonoBehaviour
     public static void KillAlienship(AlienSpaceShip a)
     {
         DestoryAlienship(a);
+    }
+
+    public static void DestoryGPABoss(bosscontroller a)
+    {
+        Destroy(a.gameObject);
+    }
+
+    public static void KillGPABoss(bosscontroller a)
+    {
+        DestoryGPABoss(a);
     }
 }
