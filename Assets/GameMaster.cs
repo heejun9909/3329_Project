@@ -12,15 +12,4 @@ public class GameMaster : MonoBehaviour
     public static void KillPlayer(Player p){
         DestoryPlayer(p);
     }
-
-
-    public static void DestoryAlienship(AlienSpaceShip a)
-    {
-        Destroy(a.gameObject);
-    }
-
-    public static void KillAlienship(AlienSpaceShip a)
-    {
-        DestoryAlienship(a);
-    }
 }

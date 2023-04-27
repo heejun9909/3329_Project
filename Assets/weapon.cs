@@ -1,11 +1,12 @@
-using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class weapon : MonoBehaviour
 {   
     public LayerMask wattohit;
     public float  fr = 0;
-    public int damage = 10;
+    public float damage = 10;
     float firetime = 0;
     Transform firepoint;
     public Transform bullettrailprefab;
@@ -16,7 +17,7 @@ public class weapon : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        firepoint = transform.Find("firepoint");
+        firepoint = transform.FindChild("firepoint");
         if (firepoint == null){
             Debug.LogError("No firepoint");
 
@@ -49,16 +50,11 @@ public class weapon : MonoBehaviour
         Debug.DrawLine (firepointpos, (mousepos - firepointpos)*100, Color.cyan);
         if (hit.collider != null){
             Debug.DrawLine (firepointpos, hit.point, Color.red);
- 
-            //check which enemy hit
-            AlienSpaceShip alienSpaceShip = hit.collider.GetComponent<AlienSpaceShip>();
-            if (alienSpaceShip != null)
-            {
-                alienSpaceShip.DamageAlienship(damage);
-                Debug.Log("We hit " + hit.collider.name + " and did " + damage + " damage.");
-            }
 
-            //Debug.Log("We hit " + hit.collider.name + " and did " + damage + " damage.");
+            // if (hit.collider.name  == "player"){
+
+            // }
+            Debug.Log("We hit " + hit.collider.name + " and did " + damage + " damage.");
         }
     } 
     void effect(){
