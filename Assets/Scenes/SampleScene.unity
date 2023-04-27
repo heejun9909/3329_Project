@@ -200,7 +200,7 @@ MonoBehaviour:
   - {fileID: 5662631233316282458}
   - {fileID: 1295618049}
   - {fileID: 936101881}
-  timeBetweenWaves: 5
+  timeBetweenWaves: 1
 --- !u!1 &163754920
 GameObject:
   m_ObjectHideFlags: 0
