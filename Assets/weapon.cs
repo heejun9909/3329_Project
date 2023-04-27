@@ -58,6 +58,14 @@ public class weapon : MonoBehaviour
                 Debug.Log("We hit " + hit.collider.name + " and did " + damage + " damage.");
             }
 
+            bosscontroller BS = hit.collider.GetComponent<bosscontroller>();
+            if (BS != null)
+            {
+                BS.DamageBoss(damage);
+                Debug.Log("We hit " + hit.collider.name + " and did " + damage + " damage."+ BS.BS.curHealth +" Health remain");
+
+            }
+
             //Debug.Log("We hit " + hit.collider.name + " and did " + damage + " damage.");
         }
     } 
